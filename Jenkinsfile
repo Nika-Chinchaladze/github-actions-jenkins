@@ -6,13 +6,13 @@ pipeline {
    stages {
       stage('install dependencies') {
         steps {
-            bat 'npm install'
+            sh 'npm install'
         }
       }
       stage('e2e-tests') {
         steps {
-            bat 'npm ci'
-            bat 'npx playwright test'
+            sh 'npm ci'
+            sh 'npx playwright test'
         }
         post {
             always {
