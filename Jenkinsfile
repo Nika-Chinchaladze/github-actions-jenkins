@@ -9,8 +9,6 @@ pipeline {
             bat 'npm install'
         }
       }
-   }
-   stages {
       stage('e2e-tests') {
         steps {
             bat 'npm ci'
